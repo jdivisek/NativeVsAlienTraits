@@ -25,7 +25,7 @@ phylo.multifwd2 <- function(tr, w, ME, nperm=999)
     test[i] <- multispati.randtest(d.pca, w, nrepet = 1)$obs
   }
   
-  #model with ME eigenvector that most decrease phylogentic autocorrelation
+  #model with ME eigenvector that most decreases phylogentic autocorrelation
   sel <- which.min(test)
   
   #calculate significance
@@ -56,7 +56,7 @@ phylo.multifwd2 <- function(tr, w, ME, nperm=999)
         test[i] <- multispati.randtest(d.pca, w, nrepet = 1)$obs
       }
       
-      #model with ME eigenvector that most decraese phylogentic autocorrelation
+      #model with ME eigenvector that most decraeses phylogentic autocorrelation
       sel <- which.min(test)
       
       #calculate significance
