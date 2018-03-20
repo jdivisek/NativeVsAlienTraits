@@ -4,7 +4,7 @@
 
 #code by Jan Divisek (2015-2017)
 
-require(plot3D)
+library(plot3D)
 library(vegan)
 
 col.3D <- c("deepskyblue1","green", "yellow1", "red2")
