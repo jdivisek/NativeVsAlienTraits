@@ -20,7 +20,7 @@ phylo.fwd <- function(tr, prox, ME, method="oriAbouheif", Nperm = 999)
     test[i] <- abouheif.moran(res, prox, method=method, nrepet = 1)$obs
   }
   
-  #model with ME eigenvector that most decrease phylogentic autocorrelation
+  #model with ME eigenvector that most decreases phylogentic autocorrelation
   sel <- which.min(test)
   
   #calculate significance
@@ -49,7 +49,7 @@ phylo.fwd <- function(tr, prox, ME, method="oriAbouheif", Nperm = 999)
         test[i] <- abouheif.moran(res, prox, method=method, nrepet = 1)$obs
       }
       
-      #model with ME eigenvector that most decraese phylogentic autocorrelation
+      #model with ME eigenvector that most decraeses phylogentic autocorrelation
       sel <- which.min(test)
       
       #calculate significance
