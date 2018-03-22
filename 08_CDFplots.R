@@ -4,7 +4,7 @@
 
 #code by Jan Divisek (2015-2017)
 
-#cairo_pdf(width=5.3, height = 7)
+#cairo_pdf("CDF1.tif", width=5.3, height = 7)
 tiff("CDF1.tif", width = 5.3, height = 7, units = "in", res=500, compression = "lzw")
 layout(matrix(1:6,ncol=2, byrow=T))
 par(mar=c(0.5, 0.5, 1.5, 0.2), oma=c(3, 3.5, 0.5, 0.5), mgp=c(3,0.6,0), las=1, tck=-0.027)
@@ -32,14 +32,8 @@ for(i in 1:6)
   title(habitat[i], cex.main=1.1, line=0.5) 
   box(lwd=0.75)
   
-  if(any(c(1,3,5) == i))
-  {
-    axis(2, lwd=0.75)
-  }
-  if(any(5:6 == i))
-  {
-    axis(1, lwd=0.75)
-  }
+  if(any(c(1,3,5) == i))  {axis(2, lwd=0.75)}
+  if(any(5:6 == i))  {axis(1, lwd=0.75)}
   
   #calculate extent of randomized CDFs for invasive species
   rand.plot <- matrix(data=NA, ncol=1000, nrow=999)
@@ -103,7 +97,7 @@ dev.off()
 ##############################################################################################
 ###PLOT CDFs FOR DATASET WITH IMPUTED TRAITS--------------------------------------------------
 
-#cairo_pdf(width=5.3, height = 7)
+#cairo_pdf("CDF2.tif", width=5.3, height = 7)
 tiff("CDF2.tif", width = 5.3, height = 7, units = "in", res=500, compression = "lzw")
 layout(matrix(1:6,ncol=2, byrow=T))
 par(mar=c(0.5, 0.5, 1.5, 0.2), oma=c(3, 3.5, 0.5, 0.5), mgp=c(3,0.6,0), las=1, tck=-0.027)
@@ -131,14 +125,8 @@ for(i in 1:6)
   title(habitat[i], cex.main=1.1, line=0.5) 
   box(lwd=0.75)
   
-  if(any(c(1,3,5) == i))
-  {
-    axis(2, lwd=0.75)
-  }
-  if(any(5:6 == i))
-  {
-    axis(1, lwd=0.75)
-  }
+  if(any(c(1,3,5) == i))  {axis(2, lwd=0.75)}
+  if(any(5:6 == i))  {axis(1, lwd=0.75)}
   
   #calculate extent of randomized CDFs for invasive species
   rand.plot <- matrix(data=NA, ncol=1000, nrow=999)
@@ -203,7 +191,7 @@ dev.off()
 #                  PLOT CDFs FOR PHYLOGENETICALLY CORRECTED DATA                          #
 ###########################################################################################
 
-#cairo_pdf(width=5.3, height = 7)
+#cairo_pdf("CDF3.tif", width=5.3, height = 7)
 tiff("CDF3.tif", width = 5.3, height = 7, units = "in", res=500, compression = "lzw")
 layout(matrix(1:6,ncol=2, byrow=T))
 par(mar=c(0.5, 0.5, 1.5, 0.2), oma=c(3, 3.5, 0.5, 0.5), mgp=c(3,0.6,0), las=1, tck=-0.027)
@@ -231,14 +219,8 @@ for(i in 1:6)
   title(habitat[i], cex.main=1.1, line=0.5) 
   box(lwd=0.75)
   
-  if(any(c(1,3,5) == i))
-  {
-    axis(2, lwd=0.75)
-  }
-  if(any(5:6 == i))
-  {
-    axis(1, lwd=0.75)
-  }
+  if(any(c(1,3,5) == i))  {axis(2, lwd=0.75)}
+  if(any(5:6 == i))  {axis(1, lwd=0.75)}
   
   #calculate extent of randomized CDFs for invasive species
   rand.plot <- matrix(data=NA, ncol=1000, nrow=999)
@@ -302,7 +284,7 @@ dev.off()
 ##############################################################################################
 ###PLOT PHYLOGENETICALLY CORRECTED CDFs FOR DATASET WITH IMPUTED TRAITS-----------------------
 
-#cairo_pdf(width=5.3, height = 7)
+#cairo_pdf("CDF4.tif", width=5.3, height = 7)
 tiff("CDF4.tif", width = 5.3, height = 7, units = "in", res=500, compression = "lzw")
 layout(matrix(1:6,ncol=2, byrow=T))
 par(mar=c(0.5, 0.5, 1.5, 0.2), oma=c(3, 3.5, 0.5, 0.5), mgp=c(3,0.6,0), las=1, tck=-0.027)
@@ -330,14 +312,8 @@ for(i in 1:6)
   title(habitat[i], cex.main=1.1, line=0.5) 
   box(lwd=0.75)
   
-  if(any(c(1,3,5) == i))
-  {
-    axis(2, lwd=0.75)
-  }
-  if(any(5:6 == i))
-  {
-    axis(1, lwd=0.75)
-  }
+  if(any(c(1,3,5) == i))  {axis(2, lwd=0.75)}
+  if(any(5:6 == i))  {axis(1, lwd=0.75)}
   
   #calculate extent of randomized CDFs for invasive species
   rand.plot <- matrix(data=NA, ncol=1000, nrow=999)
