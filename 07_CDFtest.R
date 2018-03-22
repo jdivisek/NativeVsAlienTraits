@@ -4,8 +4,8 @@
 
 #code by Jan Divisek (2015-2017)
 
-##CDFs are based on species distnaces from the centroid of native species in 3D trait space
-##Here are significance tests of the difference between the CDFs
+##CDFs are based on species distances from the centroid of native species in the 3D trait space
+##Here are significance tests of the difference between the two CDFs
 
 library(ade4)
 
