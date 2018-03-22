@@ -12,7 +12,7 @@ NN.TEST <- Diff.mediansNN.TEST
 NI.TEST <- Diff.mediansNI.TEST
 
 #windows(7,9)
-#cairo_pdf("Boxplots2.pdf", width=7, height = 9)
+#cairo_pdf("Boxplots1.pdf", width=7, height = 9)
 tiff("Boxplots1.tif", width=7, height = 9, units="in", res=500, compression = "lzw")
 layout.matrix <- matrix(c(rep(1:3,2),
                           rep(4:6,2),
@@ -515,4 +515,3 @@ for(q in c("sla.avg.mm2mg.", "HEIGHT.MAX", "Germinule"))
 }
 
 dev.off()
-
