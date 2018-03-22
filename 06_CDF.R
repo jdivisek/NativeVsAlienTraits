@@ -4,9 +4,11 @@
 
 #code by Jan Divisek (2015-2017)
 
-##CDFs are based on species distnaces from the centroid of native species in 3D trait space of each habitat
+##CDFs are based on species distances from the centroid of native species in the 3D trait space of each habitat
 
-#define step for DCF calculation
+library(vegan)
+
+#define step for CDF calculation
 xAxis <- seq(from=0, to=1, length=1000)
 
 ###RANDOMIZE INVASIVE AND NATURALIZED SPECIES---------------------------------------------------------------------------------
