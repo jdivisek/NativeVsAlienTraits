@@ -2,7 +2,7 @@
 #         CALCULATE SIMULATED CUMULATIVE DISTRIBUTION FUNCTION                #
 ###############################################################################
 
-#define funtion to randomize species and calculate distnaces from the centroid
+#define funtion to randomize species and calculate distances from the centroid of native species
 dist.shuffler.3D <- function(scores, status, test="invasive", Nrand=999)
 {
   require(vegan)
