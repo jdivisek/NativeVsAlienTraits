@@ -81,7 +81,7 @@ library(ade4)
 library(spdep)
 library(adephylo)
 
-#calculate phylogenetic distances between each pair of species
+#calculate phylogenetic distance for each pair of species
 dist.Ab.all <- as.matrix(distTips(phy.tree, method = "Abouheif"))
 dist.Ab.all[1:5,1:5]
 dim(dist.Ab.all)
@@ -99,14 +99,14 @@ trait.phy$Plant.height$HEIGHT.MAX.log <- log10(trait.phy$Plant.height$HEIGHT.MAX
 #SLA
 trait.phy$SLA <- trait[phy.tree$tip.label, c(6:11, 2, 4)]
 nrow(trait.phy$SLA)
-trait.phy$SLA <- trait.phy$SLA[complete.cases(trait.phy$SLA), ]
+trait.phy$SLA <- trait.phy$SLA[complete.cases(trait.phy$SLA), ] #remove NAs
 nrow(trait.phy$SLA)
 trait.phy$SLA$sla.avg.mm2mg.log <- log10(trait.phy$SLA$sla.avg.mm2mg.)
 
 #Germinule
 trait.phy$Germinule <- trait[phy.tree$tip.label, c(6:11, 2, 5)]
 nrow(trait.phy$Germinule)
-trait.phy$Germinule <- trait.phy$Germinule[complete.cases(trait.phy$Germinule), ]
+trait.phy$Germinule <- trait.phy$Germinule[complete.cases(trait.phy$Germinule), ] #remove NAs
 nrow(trait.phy$Germinule)
 trait.phy$Germinule$Germinule.log <- log10(trait.phy$Germinule$Germinule)
 
@@ -212,7 +212,7 @@ head(trait.phy$SLA)
 trait.phy$Germinule$Germinule.cor <- resid(lm(trait.phy$Germinule$Germinule.log ~., data=ME.single$Germinule))
 head(trait.phy$Germinule)
 
-#divide dataset according to habitats
+#divide the dataset according to habitats
 traitT.phy <- list()
 traitT.phy$PlantHeight <- trait.phy$Plant.height[trait.phy$Plant.height$T == 1, ]
 traitT.phy$SLA <- trait.phy$SLA[trait.phy$SLA$T == 1, ]
@@ -244,9 +244,9 @@ traitL.phy$SLA <- trait.phy$SLA[trait.phy$SLA$L == 1, ]
 traitL.phy$Germinule <- trait.phy$Germinule[trait.phy$Germinule$L == 1, ]
 
 ###############################################################################################
-###SELECT PHYLOGENETIC EIGENVECTORS TO FILTER OUT PYLOGENETIC SIGNAL IN IMPUTED TRAITS---------
-#only SLA and Germinule
+###SELECT PHYLOGENETIC EIGENVECTORS TO FILTER OUT PYLOGENETIC SIGNAL FROM IMPUTED TRAITS-------
 
+#SLA and Germinule only
 ME.single.full <- list()
 ME.single.full$Plant.height <- ME.single$Plant.height
 
@@ -381,7 +381,7 @@ head(trait.3D)
 trait.3D <- trait.3D[complete.cases(trait.3D), ]
 nrow(trait.3D)
 
-#create phylogenetic proximity table
+#create phylogenetic proximity matrix
 prox.Ab.all <- proxTips(phy.tree, method = "Abouheif", normalize="none")
 prox.Ab.all[1:5,1:5]
 dim(prox.Ab.all)
@@ -424,8 +424,8 @@ head(trait.3Dcor)
 trait.3Dcor <- trait.3Dcor[trait.3Dcor$INVASION.STATUS != "casual", ]
 nrow(trait.3Dcor)
 
-###########################################################
-####PHYLOGENETIC CORRECTION FOR DATASET WITH IMPUTED TRAITS
+###########################################################################
+####PHYLOGENETIC CORRECTION FOR DATASET WITH IMPUTED TRAITS----------------
 
 #assemble data
 trait.3D.full <- trait.full.s[phy.tree$tip.label, c(3:5, 2, 6:11)]
