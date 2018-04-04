@@ -5,14 +5,14 @@
 #code by Jan Divisek (2015-2017)
 
 #read list of species with traits
-trait <- read.delim("SpecList.txt", header=T, row.names = 1)
+trait <- read.delim("https://www.dropbox.com/s/w9p6e9le6ij2wu6/SpecList.txt?raw=1", header=T, row.names = 1)
 head(trait)
 dim(trait)
 
 trait$INVASION.STATUS <- factor(trait$INVASION.STATUS, levels=c("native", "casual", "naturalized", "invasive"))
 
 #read list of species - NAs in traits were replaced by average for genus or family
-trait.full <- read.delim("SpecList_FullTraits.txt", header=T, row.names = 1)
+trait.full <- read.delim("https://www.dropbox.com/s/lg3xf5uvpilfav9/SpecList_FullTraits.txt?raw=1", header=T, row.names = 1)
 head(trait.full)
 dim(trait.full)
 
@@ -20,7 +20,7 @@ trait.full$INVASION.STATUS <- factor(trait.full$INVASION.STATUS, levels=c("nativ
 
 #read phylogenetic tree (Durka & Michalski, 2012)
 tmp.env <- new.env()
-load("phy_tree.RData", envir=tmp.env)
+load("https://www.dropbox.com/s/ry8qbnepd8vhob7/phy_tree.RData?raw=1", envir=tmp.env)
 phy.tree <- get("phy.tree", pos=tmp.env)
 rm(tmp.env)
 
@@ -194,9 +194,9 @@ ME.single <- list()
 #                                  ME=ME, method="oriAbouheif", Nperm = 999)
 # head(ME.single$Germinule)
 
-ME.single$Plant.height <- read.delim("ME.single_Plant.height.txt", header=T, row.names = 1)
-ME.single$SLA <- read.delim("ME.single_SLA.txt", header=T, row.names = 1)
-ME.single$Germinule <- read.delim("ME.single_Germinule.txt", header=T, row.names = 1)
+ME.single$Plant.height <- read.delim("https://www.dropbox.com/s/1vkdbxr6dd4ncl7/ME_single_PlantHeight.txt?raw=1", header=T, row.names = 1)
+ME.single$SLA <- read.delim("https://www.dropbox.com/s/gua15pov5st5t6v/ME_single_SLA.txt?raw=1", header=T, row.names = 1)
+ME.single$Germinule <- read.delim("https://www.dropbox.com/s/hk1f8ek9ezg6yki/ME_single_Germinule.txt?raw=1", header=T, row.names = 1)
 
 ###Filter out phylogenetic autocorrelation
 
@@ -320,8 +320,8 @@ trait.full.phy$Germinule$Germinule.log <- log10(trait.full.phy$Germinule$Germinu
 #                                       ME=ME, method="oriAbouheif", Nperm = 999)
 # head(ME.single.full$Germinule)
 
-ME.single.full$SLA <- read.delim("ME.single.full_SLA.txt", header=T, row.names=1)
-ME.single.full$Germinule <- read.delim("ME.single.full_Germinule.txt", header=T, row.names=1)
+ME.single.full$SLA <- read.delim("https://www.dropbox.com/s/nyfkymj3z0x7vcg/ME_single_full_SLA.txt?raw=1", header=T, row.names=1)
+ME.single.full$Germinule <- read.delim("https://www.dropbox.com/s/d12n1zhkhg5iurl/ME_single_full_Germinule.txt?raw=1", header=T, row.names=1)
 
 ###Filter out phylogenetic autocorrelation
 
@@ -412,7 +412,7 @@ dim(prox.Ab.all)
 # ME.3D <- phylo.multifwd2(tr = trait.3D[,1:3], w = w, ME = ME, nperm=999)
 # dim(ME.3D)
 
-ME.3D <- read.delim("ME.3D.txt", header=T, row.names = 1)
+ME.3D <- read.delim("https://www.dropbox.com/s/beizk6trm0rzrd1/ME_3D.txt?raw=1", header=T, row.names = 1)
 
 ###FILTER OUT PHYLOGENETIC AUTOCORRELATION IN MULTIVARIATE TRAIT DATA
 
@@ -462,7 +462,7 @@ nrow(trait.3D.full)
 # ME.3D.full <- phylo.multifwd2(tr = trait.3D.full[,1:3], w = w, ME = ME, nperm=999)
 # dim(ME.3D.full)
 
-ME.3D.full <- read.delim("ME.3D.full.txt", header = T, row.names = 1)
+ME.3D.full <- read.delim("https://www.dropbox.com/s/ck5hwspokrtn1t3/ME_3Dfull.txt?raw=1", header = T, row.names = 1)
 
 ###FILTER OUT PHYLOGENETIC AUTOCORRELATION IN MULTIVARIATE TRAIT DATA
 
@@ -473,4 +473,3 @@ head(trait.3Dcor.full)
 #remove casuals
 trait.3Dcor.full <- trait.3Dcor.full[trait.3Dcor.full$INVASION.STATUS != "casual", ]
 nrow(trait.3Dcor.full)
-
