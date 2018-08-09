@@ -360,8 +360,8 @@ trait.imp.phy$Germinule$Germinule.log <- log10(trait.imp.phy$Germinule$Germinule
 #                                       ME=ME, method="oriAbouheif", Nperm = 999)
 # head(ME.single.imp$Germinule)
 
-ME.single.imp$SLA <- read.delim("ME.single.imp_SLA.txt", header=T, row.names=1)
-ME.single.imp$Germinule <- read.delim("ME.single.imp_Germinule.txt", header=T, row.names=1)
+ME.single.imp$SLA <- read.delim("https://www.dropbox.com/s/ifmjdirs3rb7y95/ME.single.imp_SLA.txt?raw=1", header=T, row.names=1)
+ME.single.imp$Germinule <- read.delim("https://www.dropbox.com/s/pqelv5nnq5pi4no/ME.single.imp_Germinule.txt?raw=1", header=T, row.names=1)
 
 
 ###Filter out phylogenetic autocorrelation
