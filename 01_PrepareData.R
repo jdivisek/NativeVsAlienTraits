@@ -5,7 +5,7 @@
 #code by Jan Divisek (2018)
 
 #read list of species with traits
-trait <- read.delim("SpecList.txt", header=T, row.names = 1)
+trait <- read.delim("https://www.dropbox.com/s/th2mozf98o6nrda/SpecList.txt?raw=1", header=T, row.names = 1)
 head(trait)
 dim(trait)
 
