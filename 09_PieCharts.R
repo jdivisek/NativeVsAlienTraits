@@ -3,7 +3,7 @@
 ######################################################################################################
 
 #read coordinates of cube vertices
-cube <- read.delim("cube_vertices.txt", header=T)
+cube <- read.delim("https://www.dropbox.com/s/ujb7lwqtdfmaibn/cube_vertices.txt?raw=1", header=T)
 
 habitat <- c("Grassland and heathland vegetation",
              "Ruderal and weed vegetation",
