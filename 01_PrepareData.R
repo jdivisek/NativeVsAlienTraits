@@ -13,7 +13,7 @@ trait$INVASION.STATUS <- factor(trait$INVASION.STATUS, levels=c("native", "casua
 
 #read phylogenetic tree (Durka & Michalski, 2012)
 tmp.env <- new.env()
-load("C:/Users/Geonika/Documents/R Working Directory/Trait_statistics_for_sharing/phy_tree.RData", envir=tmp.env)
+load("https://www.dropbox.com/s/ry8qbnepd8vhob7/phy_tree.RData?raw=1", envir=tmp.env)
 phy.tree <- get("phy.tree", pos=tmp.env)
 rm(tmp.env)
 
