@@ -230,9 +230,9 @@ ME.single <- list()
 #                                  ME=ME, method="oriAbouheif", Nperm = 999)
 # head(ME.single$Germinule)
 
-ME.single$Plant.height <- read.delim("ME.single_Plant.height.txt", header=T, row.names = 1)
-ME.single$SLA <- read.delim("ME.single_SLA.txt", header=T, row.names = 1)
-ME.single$Germinule <- read.delim("ME.single_Germinule.txt", header=T, row.names = 1)
+ME.single$Plant.height <- read.delim("https://www.dropbox.com/s/xlwmixjwun3xyxo/ME.single_Plant.height.txt?raw=1", header=T, row.names = 1)
+ME.single$SLA <- read.delim("https://www.dropbox.com/s/22h58n2sq9eht7q/ME.single_SLA.txt?raw=1", header=T, row.names = 1)
+ME.single$Germinule <- read.delim("https://www.dropbox.com/s/9mcptejbeodkuuf/ME.single_Germinule.txt?raw=1", header=T, row.names = 1)
 
 #germinule: 141
 #SLA: 70 
