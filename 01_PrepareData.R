@@ -453,7 +453,7 @@ dim(prox.Ab.all)
 # ME.3D <- phylo.multifwd2(tr = trait.3D[,1:3], w = w, ME = ME, nperm=999)
 # dim(ME.3D)
 
-ME.3D <- read.delim("ME.3D.txt", header=T, row.names = 1)
+ME.3D <- read.delim("https://www.dropbox.com/s/pvpmu3xoy44rjpo/ME.3D.txt?raw=1", header=T, row.names = 1)
 
 ###FILTER OUT PHYLOGENETIC AUTOCORRELATION IN MULTIVARIATE TRAIT DATA
 
@@ -504,7 +504,7 @@ nrow(trait.3D.imp)
 # dim(ME.3D.imp)
 # write.table(ME.3D.imp, file="ME.3D.imp.txt", sep="\t", dec=".")
 
-ME.3D.imp <- read.delim("ME.3D.imp.txt", header = T, row.names = 1)
+ME.3D.imp <- read.delim("https://www.dropbox.com/s/fqw6y2c2o9nn5dt/ME.3D.imp.txt?raw=1", header = T, row.names = 1)
 
 ###FILTER OUT PHYLOGENETIC AUTOCORRELATION IN MULTIVARIATE TRAIT DATA
 
